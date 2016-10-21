@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <meta name="author" content="github.com/songhlc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <style>
+        body,ul,li{
+            padding: 0;
+            margin:0;
+        }
+        .content{
+            text-align: center;
+
+        }
+        .option{
+            background-color: #443b65;
+            height: 80px;
+            line-height: 80px;
+            color: #5bafe4;
+            font-size: 20px;
+        }
+        .option span{
+            color:#79719b;
+            font-size: 14px;
+        }
+        .option-list{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            overflow: auto;
+        }
+        .option-list ul li{
+            text-align: center;
+            position: relative;
+        }
+        .option-list ul li span{
+            position: absolute;
+            right: 10%;
+            top:32px;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="select">
+        <div class="content">
+            <div class="option" id="select">10 <span>kg</span></div>
+        </div>
+        <div class="option-list hidden" id="option">
+
+            <ul>
+                <li>
+                   <div class="option u-border-b">10</div>
+                </li>
+                <li><div class="option u-border-b">11</div></li>
+                <li><div class="option u-border-b">12</div></li>
+                <li><div class="option u-border-b">13<span class="fa fa-check"></span></div></li>
+                <li><div class="option u-border-b">14</div></li>
+                <li><div class="option u-border-b">15</div></li>
+                <li><div class="option u-border-b">11</div></li>
+                <li><div class="option u-border-b">12</div></li>
+                <li><div class="option u-border-b">13</div></li>
+                <li><div class="option u-border-b">14</div></li>
+                <li><div class="option u-border-b">15</div></li>
+                <li><div class="option u-border-b">11</div></li>
+                <li><div class="option u-border-b">12</div></li>
+                <li><div class="option u-border-b">13</div></li>
+                <li><div class="option u-border-b">14</div></li>
+                <li><div class="option u-border-b">15</div></li>
+            </ul>
+        </div>
+    </div>
+    <script >
+        document.getElementById("select").addEventListener("click", function(){
+            document.getElementById("option").classList.remove('hidden');
+        });
+        document.getElementById("option").addEventListener("click", function(){
+            document.getElementById("option").classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
